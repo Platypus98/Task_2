@@ -42,7 +42,7 @@ tkinter._test()
 exit()
 ```
 
-ЗапуЗапустите файл Task_2 с помощью Python:
+Запустите файл Task_2 с помощью Python:
 
 ```
 python Task_2

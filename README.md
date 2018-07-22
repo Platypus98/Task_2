@@ -8,7 +8,7 @@
 
 ```
 git clone https://github.com/Platypus98/Task_2.git
-cd Task_1
+cd Task_2
 ```
 
 Проверьте, установлен ли у Вас tkinter. Если при вводе команд открылось маленькое окошко, то значит, что он у Вас установлен. Если же нет - необходимо переустановить или модифицировать Python(https://www.python.org/downloads/), добавив компонент tcl/tk IDLE.

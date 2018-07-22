@@ -72,7 +72,7 @@ def distance():
         r = requests.get('http://router.project-osrm.org/route/v1/car/{0}?alternatives=false&overview=false'.format(coordinates),  headers = {'User-agent': 'your bot 0.1'})
         а = r.json()['routes']
     except Exception as e:
-        messagebox.showerror("Дистанция", "Ошибка подключения к серверу. Слишком много запросов или адрес введен неточно. Попробуйте позже" )
+        messagebox.showerror("Дистанция", "Ошибка подключения к серверу. Слишком много запросов или адрес введен неточно. Попробуйте позже или перезапустите приложение." )
         return
 
     if len(r.json()['routes'][0]['legs']) == 1:
@@ -121,7 +121,7 @@ def duration():
         r = requests.get('http://router.project-osrm.org/route/v1/car/{0}?alternatives=false&overview=false'.format(coordinates),  headers = {'User-agent': 'your bot 0.1'})
         а = r.json()['routes']
     except Exception as e:
-        messagebox.showerror("Время в пути", "Ошибка подключения к серверу. Слишком много запросов или адрес введен неточно. Попробуйте позже" )
+        messagebox.showerror("Время в пути", "Ошибка подключения к серверу. Слишком много запросов или адрес введен неточно. Попробуйте позже или перезапустите приложение." )
         return
 
     if len(r.json()['routes'][0]['legs']) == 1:
@@ -184,7 +184,7 @@ def map_osrm():
 
         if pos_3_entry.get() != "":
                 location = geolocator.geocode(pos_3_entry.get())
-                coordinates += "$loc={0}%2C{1}".format(location.latitude, location.longitude)
+                coordinates += "&loc={0}%2C{1}".format(location.latitude, location.longitude)
 
         if pos_4_entry.get() != "":
                 location = geolocator.geocode(pos_4_entry.get())
@@ -219,7 +219,7 @@ pos_3 = ttk.Label(root, text = "Промежуточный пункт 2:", font 
 pos_3_entry = ttk.Entry(root, width = 30, font = "Helvetica 11")
 pos_4 = Label(root, text = "Пункт назначения:", font = "Helvetica 12 bold")
 pos_4_entry = ttk.Entry(root, width = 30, font = "Helvetica 11")
-prim = Label(root, text = "*При частых запросах на OSRM не всегда рисуется линия между точками, поэтому я добавил еще Яндекс.Карты", font = "Helvetica 9")
+prim = Label(root, text = "*На OSRM картах не всегда прорисовываются линии между точками, поэтому я добавил еще Яндекс.Карты", font = "Helvetica 9")
 
 
 #Кнопки

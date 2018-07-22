@@ -10,6 +10,20 @@ git clone https://github.com/Platypus98/Task_2.git
 cd Task_1
 ```
 
+Проверьте, установлен ли у Вас tkinter. Если при вводе команд открылось маленькое окошко, то значит, что все необходимые пакеты у Вас установленны. Если же нет - необходимо переустановить или модифицировать Python(https://www.python.org/downloads/), добавив компонент  tcl/tk IDLE.
+
+```
+python
+import tkinter
+tkinter._test()
+```
+
+Закройте окошко и введите команду:
+
+```
+exit()
+```
+
 Создайте виртуальное окружение в папке venv:
 
 ```
@@ -28,24 +42,10 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Проверьте, установлен ли у Вас tkinter. Если при вводе команд открылось маленькое окошко, то значит, что все необходимые пакеты у Вас установленны. Если же нет - необходимо переустановить или модифицировать Python(https://www.python.org/downloads/), добавив компонент  tcl/tk IDLE.
+Запустите файл Task_2.py с помощью Python:
 
 ```
-python
-import tkinter
-tkinter._test()
-```
-
-Закройте окошко и введите команду:
-
-```
-exit()
-```
-
-Запустите файл Task_2 с помощью Python:
-
-```
-python Task_2
+python Task_2.py
 ```
 
 #### Готово!

@@ -203,7 +203,7 @@ def map_osrm():
 
 
 
-geolocator = Nominatim()
+geolocator = Nominatim(user_agent="http")
 root = Tk()
 root.geometry("660x400+300+250")
 root.title("Поиск маршрута движения автомобиля")
